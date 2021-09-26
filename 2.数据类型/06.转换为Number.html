@@ -17,7 +17,7 @@
                             false转换为0
                         空值 > 数字
                             null转换为0
-                        未定义 > 数字
+                        undefined > 数字
                             undefined转换为NaN
                 方式二：
                     parseInt()专门用来将一个字符串转换为整数，可以将一个字符串中的有效的整数位提取出来，并转换为Number
@@ -25,6 +25,8 @@
                     parseFloat()专门用来将一个字符串转换为浮点数
 
                     如果对非String使用parseInt()或parseFloat()，它会先将其转换为String然后在操作 parseInt()
+                方式三：
+                    -0、*1、/1、+a
             */
            var a = "123";
            a = Number(a);

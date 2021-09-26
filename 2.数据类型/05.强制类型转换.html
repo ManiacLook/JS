@@ -17,6 +17,10 @@
                             对于Number Boolean String都会调用他们的toString()方法来将其转换为字符串
                             对于null值，直接转换为字符串"null"
                             对于undefined直接转换为字符串"undefined"
+                    方式三(隐式转换)：
+                            任意数据类型+""可以转换为String，实际上是调用String()函数
+                            var a = true;  
+                            a = a + "";
             */
             var a = 123;
             var b = a.toString();

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+        /*
+            一元运算符只需要一个操作数
+            + 正号
+                不会对值产生任何影响，但是可以将一个非数字转换为数字
+                可以对非number用+，转换为number
+            - 负号
+                对一个数字进行符号位取反
+        */
+            var a = 12;
+            a = +a; // 12
+            a = -a; // -12
+            a = -true; // -1
+            a = 1 + "2" + 3; // 123
+            a = 1 + +"2" + 3; // 6
+            console.log(a);
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
