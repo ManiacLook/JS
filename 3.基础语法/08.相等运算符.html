@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            /*
+                == 判断左右两个值是否相等，如果相等返回true，如果不等返回false
+                == 会自动对两个值进行类型转换，如果对不同的类型进行比较，会将其转换为相同的类型然后再比较，转换后相等它也会返回true，null == undifined
+
+                !=
+                    判断左右两个值是否不等，如果不等则返回true，如果相等则返回false
+                    会做自动的类型转换
+
+                ===
+                    全等，判断左右两个值是否全等，它和相等类似，只不过它不会进行自动的类型转换，
+                    如果两个值的类型不同，则直接返回 false
+
+                !==
+                    不全等，和不等类似，但是它不会进行自动的类型转换，如果两个值的类型不同，它会直接返回true
+
+                特殊的值：
+                    null和undefined
+                        由于undefined衍生自null，所以null == undefined 会返回true。
+                        但是 null === undefined 会返回false。
+                NaN
+                    NaN不与任何值相等，包括它自身 NaN == NaN // false
+
+                判断一个值是否是 NaN 使用isNaN()函数
+            */
+            console.log(1 == "1"); // true
+            console.log(null == 0); // false
+            console.log(isNaN(NaN)); // true
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
