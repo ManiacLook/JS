@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            /*
+                每次调用函数时，解析器都会将一个上下文对象作为隐含的参数传递进函数。
+                使用this来引用上下文对象，根据函数的调用形式不同，this的值也不同。
+                    1.以函数的形式调用时，this是window
+                    2.以方法的形式调用时，this就是调用方法的对象
+                    3.以构造函数的形式调用时，this就是新创建的对象
+            */
+            function fun(){
+                console.log(this.name);
+            }
+            var name = "全局name";
+            fun(); // 全局name
+            var obj = {
+                name:'look',
+                sayName:fun
+            };
+            obj.sayName(); // look
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            /*
+                forEach()方法需要一个回调函数作为参数，数组中有几个元素，回调函数就会被调用几次，
+                每次调用时，都会将遍历到的信息以实参的形式传递进来，可以定义形参来获取这些信息。
+                value:正在遍历的元素
+                index:正在遍历元素的索引
+                obj:被遍历对象
+                数组.forEach(function(value , index , obj){  
+                
+                });
+            */
+
+            var arr = [10, 20, 30, 40, 50, 60];
+            arr.forEach(function(value, index, obj){
+                console.log(value);
+                console.log(index);
+                console.log(obj);
+            })
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

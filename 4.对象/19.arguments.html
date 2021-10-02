@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            /*
+                在调用函数时，浏览器每次都会传递进两个隐含的参数：
+                    1.上下文对象 this
+                    2.封装实参的对象 arguments
+                        arguments 是一个类数组元素，它用来封装函数执行过程中的实参
+                        可以通过索引来操作数据
+                            arguments[0] 表示第一个实参
+                        可以获取长度
+                            arguments.length
+                        arguments 中有一个属性 callee 表示当前执行的函数对象
+            */
+            function fun(a, b){
+                console.log(arguments[1]);
+                console.log(arguments.length);
+            }
+            fun(10, 20); // 20 2
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

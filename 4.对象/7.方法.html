@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            /*
+                可以将一个函数设置为一个对象的属性，
+                当一个对象的属性是一个函数时，我们称这个函数是该对象的方法。
+                对象.方法名();
+                函数名()
+            */
+            var obj = new Object();
+            obj.name = "look";
+            obj.sayName = function(){
+                document.write(obj.name);
+            };
+
+            var obj2 = {
+                name: "look",
+                sayName:function(){
+                    document.write(obj.name);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

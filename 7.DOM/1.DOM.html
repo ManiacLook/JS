@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            /*
+                在网页中浏览器已经提供了 document 对象，它代表的是整个网页，它是 window 对象的属性，可以在页面中直接使用。
+            */
+        </script>
+    </head>
+    <body>
+        <button id="btn">我是一个按钮</button>
+        <script type="text/javascript">
+            // 获取button对象
+            var btn = document.getElementById("btn");
+            // 修改按钮文字
+            btn.innerHTML = "haha";
+        </script>
+    </body>
+</html>

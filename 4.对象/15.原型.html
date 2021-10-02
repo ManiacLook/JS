@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            /*
+                创建一个函数以后，解析器都会默认在函数中添加一个属性 prototype，prototype 属性指向的是一个对象，这个对象称为原型对象。
+                如果函数作为普通函数调用 prototype 没有任何作用
+                当函数以构造函数的形式调用时，它所创建的对象中都会有一个隐含的属性，指向该构造函数的原型对象，可以通过 对象.__proto__来访问。
+
+                原型对象就相当于一个公共的区域，凡是通过同一个构造函数创建的对象他们通常都可以访问到相同的原型对象。
+                可以将对象中共有的属性和方法统一添加到原型对象中，这样只需要添加一次，就可以使所有的对象都可以使用。
+
+                当我们去访问对象的一个属性或调用对象的一个方法时，它会先自身中寻找，
+                如果在自身中找到了，则直接使用。
+                如果没有找到，则去原型对象中寻找，如果找到了则使用，
+                如果没有找到，则去原型的原型中寻找，依此类推。直到找到Object的原型为止，Object的原型的原型为null，
+                如果依然没有找到则返回undefined
+            */
+            function MyClass(){
+
+            }
+
+            var mc1 = new MyClass();
+            var mc2 = new MyClass();
+
+            console.log(mc1.__proto__ == MyClass.prototype); // true
+
+            MyClass.prototype.a = 123;
+            mc1.a = "a in mc";
+            console.log(mc1.a); // a in mc
+            console.log(mc2.a); // 123
+
+            /*
+                使用 in 检查对象中是否含有某个属性时，如果对象中没有但原型中有，也会返回 true
+                hasOwnProperty() 可以用来检查对象自身中是否含有某个属性，只有对象自身含有时，才会返回 true
+            */
+            console.log("a" in mc2); // true
+            console.log(mc2.hasOwnProperty("a")); // false
+            console.log(mc1.__proto__.__proto__.hasOwnProperty("hasOwnProperty")); // true
+            console.log(mc1.__proto__.__proto__.__proto__); // null
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

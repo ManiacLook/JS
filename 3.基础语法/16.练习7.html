@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            for (var i = 100; i < 1000; i ++) {
+                var bai = parseInt(i / 100);
+                var shi = parseInt(i / 10 % 10);
+                var ge = parseInt(i % 10);
+                if (Math.pow(bai, 3) + Math.pow(shi, 3) + Math.pow(ge, 3) == i){
+                    document.write(i + '<br/>');
+                }
+            }
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

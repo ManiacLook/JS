@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            /*
+                大批量创建对象
+            */
+            function createPerson(name, age, gender) {
+                var obj = new Object();
+                
+                obj.name = name;
+                obj.age = age;
+                obj.gender = gender;
+                obj.sayName = function(){
+                    document.write(this.name);
+                }
+
+                return obj;
+            }
+
+            var obj1 = createPerson('look', 23, 'male');
+            console.log(obj1);
+            obj1.sayName();
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

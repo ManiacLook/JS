@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            /*
+                call()和apply()
+                这两个方法都是函数对象的方法，需要通过函数对象来调用
+                对函数调用 call() 和 apply() 都会调用函数执行
+                在调用 call() 和 apply() 时，可以将一个对象指定为第一个参数，此时这个对象将会成为函数执行时的 this
+                call()方法可以将实参在对象之后依次传递
+                apply()方法需要将实参封装到一个数组中统一传递
+            */
+            function fun1(){
+                document.write(this + "<br/>");
+            }
+            function fun2(){
+                document.write(this.name + "<br/>");
+            }
+            function fun3(a, b){
+                document.write(a + '    ' + b + "<br/>");
+            }
+            fun1.call(); // window
+            fun1.apply(); // window
+            
+            var obj1 = {name:'obj1'};
+            var obj2 = {name:'obj2'};
+            fun1.call(obj1); // Object
+            fun1.apply(obj1); // Object
+            fun2.call(obj2); // obj2
+            fun3.call(obj1, 2, 3); // 2 3 
+            fun3.apply(obj1, [2, 3]); // 2 3
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>

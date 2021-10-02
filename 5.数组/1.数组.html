@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script type="text/javascript">
+            /*
+                数组也是一个对象，是一个用来存储数据的对象，和 Object 类似，但是它的存储效率比普通对象要高
+                数组中保存的内容称为元素，数组使用索引（index）来操作元素，索引指由 0 开始的整数
+            */
+            // 创建数组对象
+            var arr = new Array();
+            // 添加元素
+            arr[0] = 10;
+            arr[1] = 22;
+            arr[2] = 34;
+            // 读取元素
+            console.log(arr[0]);
+            // 获取数组长度
+            // length 获取到的是数组的最大索引 + 1
+            console.log(arr.length); // 3
+            /*
+                修改数组的长度
+                如果修改后的length大于原长度，则多出的部分会空出来
+                如果修改后的length小于原长度，则原数组中多出的元素会被删除
+            */
+            arr.length = 10;
+            console.log(arr); // [10, 22, 34, 空 ×7]
+            arr.length = 1;
+            console.log(arr); // [10]
+            // 向数组最后一个位置添加元素
+            arr[arr.length] = 50;
+            console.log(arr); // [10, 50]
+        </script>
+    </head>
+    <body>
+        
+    </body>
+</html>
